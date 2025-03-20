@@ -1,0 +1,9 @@
+title: "Kasmadiana Portfolio"
+description: "A semi-professional portfolio showcasing my work in IT, data analytics, and design."
+author: "Ksmadi"
+baseurl: "" # Leave blank for GitHub Pages
+url: "https://ksmadi.xyz" # Your custom domain
+theme: minima # Or keep your existing custom design
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
