@@ -2,24 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Coming Soon - ksmadi.xyz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 20%;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        h1 { font-size: 48px; }
-        p { font-size: 24px; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - IT Freelancer & Knowledge Hub</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <h1>Coming Soon</h1>
-    <p>ksmadi.xyz is under construction. Stay tuned!</p>
-    
-    <p>Selamat Hari Raya</p>
-    <p>Maaf Zahir & Batin</p>
+    <!-- Header -->
+    <header>
+        <div class="logo">Your Name</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/knowledge/">Knowledge</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button>🔍</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Left Sidebar: Posts -->
+        <aside class="sidebar-left">
+            <h2>Posts</h2>
+            <ul>
+                {% for post in site.posts %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </aside>
+
+        <!-- Center: Tabs -->
+        <section class="content-center">
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab('profile')">Profile</button>
+                <button class="tab-button" onclick="openTab('tools')">Tools</button>
+                <button class="tab-button" onclick="openTab('expertise')">Expertise</button>
+            </div>
+            <div id="profile" class="tab-content active">
+                <h2>Profile</h2>
+                <p>Hi, I'm [Your Name], an IT enthusiast with 5+ years of experience in system setup, networking, and consulting. I’m passionate about solving tech challenges and sharing knowledge.</p>
+            </div>
+            <div id="tools" class="tab-content">
+                <h2>Tools</h2>
+                <ul>
+                    <li>Hardware: PC building tools, multimeters</li>
+                    <li>Software: Windows, Linux, Wireshark</li>
+                    <li>Other: Network diagnostic tools</li>
+                </ul>
+            </div>
+            <div id="expertise" class="tab-content">
+                <h2>Expertise</h2>
+                <ul>
+                    <li>Computer Setup & Optimization</li>
+                    <li>Network Troubleshooting</li>
+                    <li>IT Consulting</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Right Sidebar: Features & Links -->
+        <aside class="sidebar-right">
+            <div class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>Feature 1: Custom PC Builds</li>
+                    <li>Feature 2: Network Solutions</li>
+                    <li>Feature 3: IT Consulting</li>
+                    <li>Feature 4: Tech Guides</li>
+                    <li>Feature 5: Remote Support</li>
+                    <li>Feature 6: System Optimization</li>
+                </ul>
+            </div>
+            <div class="external-links">
+                <h2>External Links</h2>
+                <ul>
+                    <li><a href="https://github.com/your-username">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/your-profile">LinkedIn</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 ksmadi. All rights reserved.</p>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
