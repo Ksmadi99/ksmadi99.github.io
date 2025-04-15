@@ -1,9 +1,18 @@
+# _config.yml
 title: "Kasmadiana Portfolio"
 description: "A semi-professional portfolio showcasing my work in IT, data analytics, and design."
 author: "Ksmadi"
-baseurl: "" # Leave blank for GitHub Pages
+baseurl: "" # Leave blank for GitHub Pages (root domain)
 url: "https://ksmadi.xyz" # Your custom domain
-theme: minima # Or keep your existing custom design
+permalink: /knowledge/:year/:month/:day/:title/ # For blog posts
+markdown: kramdown
+theme: minima # We’ll override with custom CSS
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Collections (for organizing content like Knowledge Hub posts)
+collections:
+  knowledge:
+    output: true
+    permalink: /knowledge/:name/
