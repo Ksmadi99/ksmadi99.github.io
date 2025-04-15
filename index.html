@@ -27,15 +27,17 @@
 
     <!-- Main Content -->
     <main class="container">
-        <!-- Left Sidebar: Posts -->
+               <!-- Left Sidebar: Knowledge Hub -->
         <aside class="sidebar-left">
-            <h2>Posts</h2>
+            <h2>Knowledge Hub</h2>
+            <p>Tech Support & Beyond: Practical IT guides by Ksmadi, an IT Support Executive with over 1 year of experience.</p>
             <ul>
                 {% for post in site.posts %}
-                    <li><a href="{{ _post.url }}">{{ post.title }}</a></li>
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
-        </aside>
+            <a href="/knowledge/" class="see-all">See All Guides</a>
+        </aside
 
         <!-- Center: Tabs -->
         <section class="content-center">
