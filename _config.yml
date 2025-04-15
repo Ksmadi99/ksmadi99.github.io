@@ -12,6 +12,7 @@ plugins:
   - jekyll-seo-tag
 
 # Collections (for organizing content like Knowledge Hub posts)
+permalink: /knowledge/:year/:month/:day/:title/
 collections:
   knowledge:
     output: true
